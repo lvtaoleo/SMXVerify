@@ -1,43 +1,89 @@
 ﻿<!DOCTYPE HTML>
 <html dir="ltr" lang="zh_CN">
-	<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-	<title>JavaScript版国密算法的实现</title>
+<title>JavaScript版国密算法的实现</title>
 
-	<!--- CSS --->
-	<link rel="stylesheet" href="style.css" type="text/css" />
+<!--- CSS --->
+<link rel="stylesheet" href="style.css" type="text/css" />
 
 
-	<!--- Javascript libraries (jQuery and Selectivizr) used for the custom checkbox --->
+<!--- Javascript libraries (jQuery and Selectivizr) used for the custom checkbox --->
 
-	<!--[if (gte IE 6)&(lte IE 8)]>
-		<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
-		<script type="text/javascript" src="selectivizr.js"></script>
-		<noscript><link rel="stylesheet" href="fallback.css" /></noscript>
-	<![endif]-->
+<!--[if (gte IE 6)&(lte IE 8)]>
+			<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+			<script type="text/javascript" src="selectivizr.js"></script>
+			<noscript><link rel="stylesheet" href="fallback.css" /></noscript>
+		<![endif]-->
 
-	</head>
+<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+/* 	$(document).ready(function() {
+		$('#submit').click(function() {
+			$.ajax({
+				type : 'GET',
+				url : 'http://localhost:9080/rest/test',
+				contentType : 'application/json',
+				success : function(data) {
+					console.log(data);
+				}
+				timeout : 60000
+			});
+			return false;
+		});
+	}); */
+</script>
+<script type="text/javascript">
+        function test()
+        {        
+        	$.ajax({
+				type : 'GET',
+				url : 'http://localhost:9080/rest/test',
+				contentType : 'application/json',
+				success : function(data) {
+					console.log(data);
+				}
+			});
+			return false;  
+        }  
+    </script>
+</head>
+<body>
+	<div id="container">
+		<form>
 
-	<body>
-		<div id="container">
-			<form action="welcome.html">
-				<div class="login">登陆</div>
-				<div class="username-text">用户名:</div>
-				<div class="password-text">密码:</div>
-				<div class="username-field">
-					<input type="text" name="username" value="yinwenqi" />
-				</div>
-				<div class="password-field">
-					<input type="password" name="password" value="yinwenqi" />
-				</div>
-				<input type="checkbox" name="remember-me" id="remember-me" /><label for="remember-me">记住密码</label>
-				<div class="forgot-usr-pwd">忘记 <a href="#">用户名</a> or <a href="#">密码</a>?</div>
-				<input type="submit" name="submit" value="GO" />
-			</form>
-		</div>
-		<div id="footer">
-			JavaScript版国密算法的实现   <a href="http://www.mycodes.net/" target="_blank" title="关于">关于</a>
-		</div>
-	</body>
+			<br>
+			<div class="login">登陆</div>
+			<div class="username-text">用户名:</div>
+			<div class="password-text">密码:</div>
+			<div class="username-field">
+				<input type="text" name="username" value="yinwenqi" />
+			</div>
+			<div class="password-field">
+				<input type="password" name="password" value="yinwenqi" />
+			</div>
+
+			<input type="checkbox" name="remember-me" id="remember-me" /><label
+				for="remember-me">记住密码</label> <select class="select" name="curve1">
+				<option value="sm2">SM2</option>
+				<option value="secp256r1">secp256r1 (= NIST P-256, P-256,
+					prime256v1)</option>
+				<option value="secp256k1">secp256k1</option>
+				<option value="secp384r1">secp384r1 (= NIST P-384, P-384)</option>
+			</select>
+			<div class="forgot-usr-pwd">
+				忘记 <a href="#">用户名</a> or <a href="#">密码</a>?
+			</div>
+
+			<input type="submit" name="submit" value="GO" onclick="test();" />
+
+		</form>
+
+	</div>
+	<div id="footer">
+		基于国密算法的SSL VPN安全通信协议的设计与实现 <a href="http://www.mycodes.net/"
+			target="_blank" title="关于"></a>
+	</div>
+</body>
 </html>

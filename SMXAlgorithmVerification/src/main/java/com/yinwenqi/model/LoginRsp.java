@@ -1,9 +1,13 @@
+
 package com.yinwenqi.model;
 
 public class LoginRsp {
+
+	private boolean canLogin;
+
+	private String resultMsg;
+
 	private String lastLoginTime;
-	
-	private String result;
 
 	public String getLastLoginTime() {
 		return lastLoginTime;
@@ -13,11 +17,19 @@ public class LoginRsp {
 		this.lastLoginTime = lastLoginTime;
 	}
 
-	public String getResult() {
-		return result;
+	public boolean isCanLogin() {
+		return canLogin;
 	}
 
-	public void setResult(String result) {
-		this.result = result;
+	public void setCanLogin(boolean canLogin) {
+		this.canLogin = canLogin;
+	}
+
+	public String getResultMsg() {
+		return resultMsg;
+	}
+
+	public void setResultMsg(String resultMsg) {
+		this.resultMsg = resultMsg;
 	}
 }

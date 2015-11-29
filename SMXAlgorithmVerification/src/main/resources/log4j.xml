@@ -11,7 +11,7 @@
 	</appender>
 
 	<!-- Application Loggers -->
-	<logger name="com.cnblogs.yjmyzz">
+	<logger name="com.yinwenqi">
 		<level value="debug" />
 	</logger>
 

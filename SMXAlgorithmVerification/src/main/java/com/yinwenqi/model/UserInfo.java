@@ -1,16 +1,16 @@
 package com.yinwenqi.model;
 
 public class UserInfo {
-	
+
 	private String userName;
-	
+
 	private String password;
-	
-	private boolean isRememberPwd;
-	
+
+	private int rememberPwd;
+
 	private String certStr;
 
-	private int cryptMode;
+	private String cryptMode;
 
 	private String publicKey;
 
@@ -18,7 +18,7 @@ public class UserInfo {
 		return certStr;
 	}
 
-	public int getCryptMode() {
+	public String getCryptMode() {
 		return cryptMode;
 	}
 
@@ -34,15 +34,11 @@ public class UserInfo {
 		return userName;
 	}
 
-	public boolean isRememberPwd() {
-		return isRememberPwd;
-	}
-
 	public void setCertStr(String certStr) {
 		this.certStr = certStr;
 	}
 
-	public void setCryptMode(int cryptMode) {
+	public void setCryptMode(String cryptMode) {
 		this.cryptMode = cryptMode;
 	}
 
@@ -54,12 +50,16 @@ public class UserInfo {
 		this.publicKey = publicKey;
 	}
 
-	public void setRememberPwd(boolean isRememberPwd) {
-		this.isRememberPwd = isRememberPwd;
-	}
-
 	public void setUserName(String userName) {
 		this.userName = userName;
+	}
+
+	public int getRememberPwd() {
+		return rememberPwd;
+	}
+
+	public void setRememberPwd(int rememberPwd) {
+		this.rememberPwd = rememberPwd;
 	}
 
 	@Override
@@ -69,14 +69,14 @@ public class UserInfo {
 		builder.append(userName);
 		builder.append(", password=");
 		builder.append(password);
-		builder.append(", publicKey=");
-		builder.append(publicKey);
+		builder.append(", rememberPwd=");
+		builder.append(rememberPwd);
 		builder.append(", certStr=");
 		builder.append(certStr);
 		builder.append(", cryptMode=");
 		builder.append(cryptMode);
-		builder.append(", isRememberPwd=");
-		builder.append(isRememberPwd);
+		builder.append(", publicKey=");
+		builder.append(publicKey);
 		builder.append("]");
 		return builder.toString();
 	}

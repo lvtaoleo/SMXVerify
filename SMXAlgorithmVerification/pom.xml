@@ -94,7 +94,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>springmvc</finalName>
+		<finalName>rest</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.mortbay.jetty</groupId>

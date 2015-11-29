@@ -3,7 +3,7 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapps"/>
-        <property name="context-root" value="verify"/>
         <property name="java-output-path" value="/SMXAlgorithmVerification/bin"/>
+        <property name="context-root" value="SMXAlgorithmVerification"/>
     </wb-module>
 </project-modules>
